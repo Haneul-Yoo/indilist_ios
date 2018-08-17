@@ -109,12 +109,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjK-TX-V1w">
-                                <rect key="frame" x="120" y="473" width="135" height="30"/>
+                                <rect key="frame" x="120" y="521" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="register"/>
                                 <connections>
-                                    <action selector="checkBtn:" destination="h74-hI-YGP" eventType="touchUpInside" id="KAc-Dk-rYN"/>
+                                    <action selector="registerBtn:" destination="h74-hI-YGP" eventType="touchUpInside" id="Hx0-fQ-Pf4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CW-hN-J2e">
@@ -129,34 +129,101 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbA-m2-H0Y">
-                                <rect key="frame" x="50" y="147" width="275" height="50"/>
+                                <rect key="frame" x="50" y="94" width="275" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pw" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-6e-6rK">
-                                <rect key="frame" x="50" y="239" width="275" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="changeIdText:" destination="h74-hI-YGP" eventType="editingChanged" id="aeo-R0-hVU"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pw again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wks-5W-v43">
-                                <rect key="frame" x="50" y="326" width="275" height="50"/>
+                                <rect key="frame" x="50" y="240" width="275" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="changePwChkText:" destination="h74-hI-YGP" eventType="editingChanged" id="O9o-E4-A3z"/>
+                                </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-jX-yP9">
+                                <rect key="frame" x="50" y="363" width="275" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeNameText:" destination="h74-hI-YGP" eventType="editingChanged" id="nMi-pa-Wfd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="인증받을 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-h3-1l2">
+                                <rect key="frame" x="50" y="438" width="275" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeEmailText:" destination="h74-hI-YGP" eventType="editingChanged" id="HHz-EA-ndo"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-3c-ZbA">
+                                <rect key="frame" x="269" y="106" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="중복확인"/>
+                                <connections>
+                                    <action selector="dupliIdBtn:" destination="h74-hI-YGP" eventType="touchUpInside" id="cvL-uC-Q5I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-Ni-KGo">
+                                <rect key="frame" x="269" y="373" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="중복확인"/>
+                                <connections>
+                                    <action selector="dupliNameBtn:" destination="h74-hI-YGP" eventType="touchUpInside" id="Kb2-ea-GUp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-ST-Rm6">
+                                <rect key="frame" x="269" y="448" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="중복확인"/>
+                                <connections>
+                                    <action selector="dupliEmailBtn:" destination="h74-hI-YGP" eventType="touchUpInside" id="F7N-eA-SjP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pw" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-6e-6rK">
+                                <rect key="frame" x="50" y="165" width="275" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="changePwText:" destination="h74-hI-YGP" eventType="editingChanged" id="iNn-fo-bAL"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-8Y-GQT">
+                                <rect key="frame" x="120" y="298" width="255" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ncz-UW-4KI"/>
                     </view>
                     <connections>
-                        <outlet property="firstText" destination="dbA-m2-H0Y" id="HXs-Iw-jMh"/>
-                        <outlet property="secondText" destination="Fnn-6e-6rK" id="Jb0-uz-zd7"/>
-                        <outlet property="thirdText" destination="wks-5W-v43" id="Xwv-s9-K8V"/>
+                        <outlet property="dupliEmailBtn" destination="OO2-ST-Rm6" id="Rtc-W8-Fif"/>
+                        <outlet property="dupliIdBtn" destination="qRz-3c-ZbA" id="xKi-51-2sz"/>
+                        <outlet property="dupliNameBtn" destination="BmK-Ni-KGo" id="pAY-PW-1A2"/>
+                        <outlet property="emailText" destination="aNS-h3-1l2" id="bZV-j3-beN"/>
+                        <outlet property="idText" destination="dbA-m2-H0Y" id="0xF-2k-c8t"/>
+                        <outlet property="nameText" destination="aQ2-jX-yP9" id="EeK-QJ-R9L"/>
+                        <outlet property="pwChkText" destination="wks-5W-v43" id="hix-55-etb"/>
+                        <outlet property="pwText" destination="Fnn-6e-6rK" id="TII-t2-xCb"/>
+                        <outlet property="pwWarnLabel" destination="gOe-8Y-GQT" id="a5e-RG-ZzC"/>
+                        <outlet property="registerBtn" destination="GjK-TX-V1w" id="InP-er-3xF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh7-HJ-JE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,6 +250,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4HY-y4-odK"/>
+        <segue reference="sDM-aW-h05"/>
     </inferredMetricsTieBreakers>
 </document>

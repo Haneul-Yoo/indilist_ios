@@ -28,44 +28,41 @@ class loginView: UIViewController {
     
     func indi_login(){
         
+        
+        let userEmail = emailText.text!
+        let userPass = passText.text!
+        
         let url = "https://www.indi-list.com/auth/login/"
         let headers    = [ "Content-Type" : "application/json"]
-        let para : Parameters = [ "id" : "qwer1234", "pw" : "qwer1234"]
+        let para : Parameters = [ "id" : userEmail, "pw" : userPass]
+        
         Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
                 
-                print(response)
-                //print(response.result)
-                
+            print(response)
+            
+            let retString = (response.value ?? "")
+            
+            if(retString == "There is no correct User or There must be login error"){
+                print("아이디 혹은 비밀번호가 잘못되었습니다.")
+                self.alertAc(mesAlert: "아이디 혹은 비밀번호가 잘못되었습니다.")
+            }
+            else if(retString == "not verify"){
+                print("이메일을 인증해주세요.")
+                self.alertAc(mesAlert: "이메일을 인증해주세요.")
+            }
+            else{
+                print("로그인 성공")
+                UserDefaults.standard.set(true, forKey: "loginSuccess")
+                UserDefaults.standard.synchronize()
+                self.dismiss(animated: true, completion: nil)
+            }
         }
 
     }
     
     @IBAction func loginBtn(_ sender: Any) {
-        let userEmail = emailText.text!
-        let userPass = passText.text!
         
         indi_login()
-        
-        
-        let userEmailStored = UserDefaults.standard.string(forKey: "email")
-        let userPassStored = UserDefaults.standard.string(forKey: "pass")
-        
-        if(userEmail == userEmailStored){
-            if(userPass == userPassStored){
-                //alertAc(mesAlert: "success")
-                
-                UserDefaults.standard.set(true, forKey: "loginSuccess")
-                UserDefaults.standard.synchronize()
-                self.dismiss(animated: true, completion: nil)
-               // self.dismiss(animated: true, completion: nil)
-            }
-            else{
-                alertAc(mesAlert: "pass wrong")
-            }
-        }
-        else{
-            alertAc(mesAlert: "no such email")
-        }
         
     }
     
