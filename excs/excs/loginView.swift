@@ -17,7 +17,7 @@ class loginView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserDefaults.standard.setValue(false, forKey: "policySuccess")
         // Do any additional setup after loading the view.
     }
 

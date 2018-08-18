@@ -32,6 +32,8 @@ class checkView: UIViewController {
     var emailChk = false
     var pwChk = false
     
+    let headers    = [ "Content-Type" : "application/json"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.setValue("", forKey: "non_dupId")
@@ -39,6 +41,7 @@ class checkView: UIViewController {
         UserDefaults.standard.setValue("", forKey: "non_dupEmail")
         UserDefaults.standard.setValue("", forKeyPath: "emailError")
         UserDefaults.standard.synchronize()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -50,16 +53,18 @@ class checkView: UIViewController {
     @IBAction func changePwText(_ sender: Any) {
         let pwStr = pwText.text!
         let pwChkStr = pwChkText.text!
+        pwChk = false
         if(!patternChk(str: pwStr)) {
             pwWarnLabel.text = "비밀번호는 영문, 숫자만 가능합니다."
         }
         else if(strlen(pwStr) < 6) {
             pwWarnLabel.text = "비밀번호는 6자 이상이어야 합니다."
-            pwChk = false
+        }
+        else if(pwChkStr == ""){
+            pwWarnLabel.text = "비밀번호를 한번 더 입력해주세요."
         }
         else if(pwStr != pwChkStr) {
             pwWarnLabel.text = "비밀번호가 일치하지 않습니다."
-            pwChk = false
         }
         else{
             pwChk = true
@@ -186,7 +191,6 @@ class checkView: UIViewController {
     func dupliChk(str: String, post: String, paraIndex: String, key_value: String, completion: @escaping ()->()){
         
         let url = "https://www.indi-list.com/" + post
-        let headers    = [ "Content-Type" : "application/json"]
         let para : Parameters = [ paraIndex : str]
         
         Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
@@ -228,20 +232,32 @@ class checkView: UIViewController {
     
     //final check
     @IBAction func registerBtn(_ sender: Any) {
+        let url = "https://www.indi-list.com/auth/signup/"
         
+        let para : Parameters = ["id": idText.text!, "pw": pwText.text!, "email": emailText.text!, "name": nameText.text!]
         //check all things to fill
         if(idChk && nameChk && emailChk && pwChk){
             print("all checked")
+            
+            Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
+                
+                print(response)
+                let retString = (response.value ?? "")
+                print(retString)
+                print("ddff")
+            }
+            
         }
-        else{
+        else {
             print("모든 확인을 마쳐주세요")
         }
-        
         return
     }
     
     
     
+    
+    //alert
     func loginAlert(alertMessage : String){
         let myAlert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert);
         

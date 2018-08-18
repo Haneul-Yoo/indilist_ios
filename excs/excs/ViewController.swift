@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func logoutBtn(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "loginSuccess")
         UserDefaults.standard.synchronize()
