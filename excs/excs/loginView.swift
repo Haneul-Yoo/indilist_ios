@@ -33,7 +33,7 @@ class loginView: UIViewController {
         let userPass = passText.text!
         
         let url = "https://www.indi-list.com/auth/login/"
-        let headers    = [ "Content-Type" : "application/json"]
+        let headers    = [ "Content-Type" : "application/json" ]
         let para : Parameters = [ "id" : userEmail, "pw" : userPass]
         
         Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in

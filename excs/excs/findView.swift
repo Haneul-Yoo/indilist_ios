@@ -14,6 +14,8 @@ class findView: UIViewController {
     @IBOutlet weak var pwIdText: UITextField!
     @IBOutlet weak var pwEmailText: UITextField!
     
+    @IBOutlet weak var findIdBtn: UIButton!
+    @IBOutlet weak var findPwBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class findView: UIViewController {
     }
     
     func findActivity(urlStr: String, para: Parameters, completion: @escaping ()->()){
+        self.btnDisable()
         loadingAlert()
         let url = "https://www.indi-list.com/" + urlStr
         let headers    = [ "Content-Type" : "application/json"]
@@ -62,10 +65,20 @@ class findView: UIViewController {
                     self.alertAc(mesAlert: "에러")
                 }
             })
+            self.btnAble()
             completion()
         }
     }
 
+    func btnAble(){
+        findIdBtn.isEnabled = true
+        findPwBtn.isEnabled = true
+    }
+    
+    func btnDisable(){
+        findIdBtn.isEnabled = false
+        findPwBtn.isEnabled = false
+    }
     
     func fill_init(){
         idEmailText.text = ""

@@ -239,14 +239,14 @@ class checkView: UIViewController {
         if(idChk && nameChk && emailChk && pwChk){
             print("all checked")
             
+            loginAlert(alertMessage: "이메일 인증 완료 후 회원가입이 완료됩니다.")
+            
             Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
                 
                 print(response)
                 let retString = (response.value ?? "")
                 print(retString)
-                print("ddff")
             }
-            
         }
         else {
             print("모든 확인을 마쳐주세요")
