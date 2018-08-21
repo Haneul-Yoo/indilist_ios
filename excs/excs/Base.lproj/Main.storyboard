@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjK-TX-V1w">
-                                <rect key="frame" x="120" y="521" width="135" height="30"/>
+                                <rect key="frame" x="120" y="596" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="register"/>
@@ -294,7 +294,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbA-m2-H0Y">
-                                <rect key="frame" x="50" y="94" width="275" height="50"/>
+                                <rect key="frame" x="50" y="174" width="275" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -303,18 +303,8 @@
                                     <action selector="changeIdText:" destination="h74-hI-YGP" eventType="editingChanged" id="aeo-R0-hVU"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wks-5W-v43">
-                                <rect key="frame" x="50" y="240" width="275" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="changePwChkText:" destination="h74-hI-YGP" eventType="editingChanged" id="O9o-E4-A3z"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-jX-yP9">
-                                <rect key="frame" x="50" y="363" width="275" height="50"/>
+                                <rect key="frame" x="50" y="443" width="275" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -324,7 +314,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="인증받을 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-h3-1l2">
-                                <rect key="frame" x="50" y="438" width="275" height="50"/>
+                                <rect key="frame" x="50" y="512" width="275" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -334,7 +324,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-3c-ZbA">
-                                <rect key="frame" x="269" y="106" width="52" height="30"/>
+                                <rect key="frame" x="269" y="186" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="중복확인"/>
                                 <connections>
@@ -342,7 +332,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-Ni-KGo">
-                                <rect key="frame" x="269" y="373" width="52" height="30"/>
+                                <rect key="frame" x="269" y="453" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="중복확인"/>
                                 <connections>
@@ -350,7 +340,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-ST-Rm6">
-                                <rect key="frame" x="269" y="448" width="52" height="30"/>
+                                <rect key="frame" x="269" y="522" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="중복확인"/>
                                 <connections>
@@ -358,7 +348,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnn-6e-6rK">
-                                <rect key="frame" x="50" y="165" width="275" height="50"/>
+                                <rect key="frame" x="50" y="245" width="275" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -368,12 +358,26 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-8Y-GQT">
-                                <rect key="frame" x="120" y="298" width="255" height="21"/>
+                                <rect key="frame" x="120" y="378" width="255" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Mrd-Vz-8cA">
+                                <rect key="frame" x="120" y="86" width="146" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wks-5W-v43">
+                                <rect key="frame" x="50" y="313" width="275" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="changePwChkText:" destination="h74-hI-YGP" eventType="editingChanged" id="O9o-E4-A3z"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ncz-UW-4KI"/>
@@ -389,6 +393,7 @@
                         <outlet property="pwText" destination="Fnn-6e-6rK" id="TII-t2-xCb"/>
                         <outlet property="pwWarnLabel" destination="gOe-8Y-GQT" id="a5e-RG-ZzC"/>
                         <outlet property="registerBtn" destination="GjK-TX-V1w" id="InP-er-3xF"/>
+                        <outlet property="userImage" destination="Mrd-Vz-8cA" id="buy-Vz-wig"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh7-HJ-JE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -502,8 +507,12 @@
             <point key="canvasLocation" x="2207.1999999999998" y="874.81259370314854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuIcon" width="900" height="760"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qm9-FE-5Aq"/>
-        <segue reference="4HY-y4-odK"/>
+        <segue reference="CSF-y4-IQq"/>
+        <segue reference="XtM-TT-wDt"/>
+        <segue reference="A4x-HX-oIg"/>
     </inferredMetricsTieBreakers>
 </document>

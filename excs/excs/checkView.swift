@@ -26,6 +26,7 @@ class checkView: UIViewController {
     
     @IBOutlet weak var registerBtn: UIButton!
     
+    @IBOutlet weak var userImage: UIImageView!
     
     var idChk = false
     var nameChk = false
@@ -123,7 +124,6 @@ class checkView: UIViewController {
         })
     }
     
-    
     @IBAction func changeNameText(_ sender: Any) {
         if(nameChk == true){
             self.dupliNameBtn.isEnabled = true
@@ -158,6 +158,7 @@ class checkView: UIViewController {
             UserDefaults.standard.synchronize()
         }
     }
+    
     @IBAction func dupliEmailBtn(_ sender: Any) {
         let emailStr = emailText.text!
         
@@ -253,9 +254,6 @@ class checkView: UIViewController {
         }
         return
     }
-    
-    
-    
     
     //alert
     func loginAlert(alertMessage : String){

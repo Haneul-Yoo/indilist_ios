@@ -28,9 +28,11 @@ class policyView: UIViewController {
     }
     
     func loadPolicy(completion: @escaping ()->()){
+        
         let policyUrl = URL(string: "https://www.indi-list.com/policy/privacy")
         let request = NSURLRequest(url: policyUrl!)
         policyWebView.loadRequest(request as URLRequest)
+        
         completion()
     }
 

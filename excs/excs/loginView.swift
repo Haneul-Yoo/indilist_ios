@@ -37,25 +37,32 @@ class loginView: UIViewController {
         let para : Parameters = [ "id" : userEmail, "pw" : userPass]
         
         Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
-                
+            
             print(response)
+            if(response.result.isSuccess){
+                let retString = (response.value ?? "")
+                print(retString)
+                if(retString == "There is no correct User or There must be login error"){
+                    print("아이디 혹은 비밀번호가 잘못되었습니다.")
+                    self.alertAc(mesAlert: "아이디 혹은 비밀번호가 잘못되었습니다.")
+                }
+                else if(retString == "not verify"){
+                    print("이메일을 인증해주세요.")
+                    self.alertAc(mesAlert: "이메일을 인증해주세요.")
+                }
+                else{
+                    print("로그인 성공")
+                    UserDefaults.standard.set(true, forKey: "loginSuccess")
+                    UserDefaults.standard.synchronize()
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            else if(response.result.isFailure){
+                self.alertAc(mesAlert: "서버에 연결되어있지 않습니다.")
+                print("서버 연결 안됨")
+            }
             
-            let retString = (response.value ?? "")
-            
-            if(retString == "There is no correct User or There must be login error"){
-                print("아이디 혹은 비밀번호가 잘못되었습니다.")
-                self.alertAc(mesAlert: "아이디 혹은 비밀번호가 잘못되었습니다.")
-            }
-            else if(retString == "not verify"){
-                print("이메일을 인증해주세요.")
-                self.alertAc(mesAlert: "이메일을 인증해주세요.")
-            }
-            else{
-                print("로그인 성공")
-                UserDefaults.standard.set(true, forKey: "loginSuccess")
-                UserDefaults.standard.synchronize()
-                self.dismiss(animated: true, completion: nil)
-            }
+            print(response.result)
         }
 
     }
