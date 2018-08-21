@@ -28,7 +28,6 @@ class loginView: UIViewController {
     
     func indi_login(){
         
-        
         let userEmail = emailText.text!
         let userPass = passText.text!
         
@@ -55,6 +54,11 @@ class loginView: UIViewController {
                     UserDefaults.standard.set(true, forKey: "loginSuccess")
                     UserDefaults.standard.synchronize()
                     self.dismiss(animated: true, completion: nil)
+                    
+                    let retStringArray = retString.components(separatedBy: "\"")
+                    
+                    self.loginUserInfo(userInfo: retStringArray)
+                    
                 }
             }
             else if(response.result.isFailure){
@@ -66,6 +70,35 @@ class loginView: UIViewController {
         }
 
     }
+    
+    //(login success) save login information in app
+    func loginUserInfo(userInfo: Array<String>){
+        print(userInfo)
+        var tempEV : Array<String> = userInfo[22].components(separatedBy: ":")
+        tempEV = tempEV[1].components(separatedBy: ",")
+        var tempUQ : Array<String> = userInfo[28].components(separatedBy: ":")
+        tempUQ = tempUQ[1].components(separatedBy: ",")
+        UserDefaults.standard.set(String(userInfo[3]), forKey: "loginName")
+        print(userInfo[3])
+        UserDefaults.standard.set(String(userInfo[7]), forKey: "loginId")
+        print(userInfo[7])
+        UserDefaults.standard.set(String(userInfo[11]), forKey: "loginSignuptime")
+        print(userInfo[11])
+        UserDefaults.standard.set(String(userInfo[15]), forKey: "loginPhoto")
+        print(userInfo[15])
+        UserDefaults.standard.set(String(userInfo[19]), forKey: "loginEmail")
+        print(userInfo[19])
+        UserDefaults.standard.set(String(tempEV[0]), forKey: "loginEmailverify")
+        print(tempEV[0])
+        UserDefaults.standard.set(String(userInfo[25]), forKey: "loginIsAritist")
+        print(userInfo[25])
+        UserDefaults.standard.set(String(tempUQ[0]), forKey: "loginUser_quit")
+        print(tempUQ[0])
+        UserDefaults.standard.set(String(userInfo[31]), forKey: "loginToken")
+        print(userInfo[31])
+        UserDefaults.standard.synchronize()
+    }
+    
     
     @IBAction func loginBtn(_ sender: Any) {
         

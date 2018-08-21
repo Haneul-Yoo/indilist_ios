@@ -30,9 +30,22 @@ class ViewController: UIViewController {
     @IBAction func logoutBtn(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "loginSuccess")
         UserDefaults.standard.synchronize()
+        logoutUserInfo()
         self.performSegue(withIdentifier: "goMenu", sender: self)
     }
  
+    func logoutUserInfo(){
+        UserDefaults.standard.set("", forKey: "loginName")
+        UserDefaults.standard.set("", forKey: "loginId")
+        UserDefaults.standard.set("", forKey: "loginSignuptime")
+        UserDefaults.standard.set("", forKey: "loginPhoto")
+        UserDefaults.standard.set("", forKey: "loginEmail")
+        UserDefaults.standard.set("", forKey: "loginEmailverify")
+        UserDefaults.standard.set("", forKey: "loginIsAritist")
+        UserDefaults.standard.set("", forKey: "loginUser_quit")
+        UserDefaults.standard.set("", forKey: "loginToken")
+        UserDefaults.standard.synchronize()
+    }
     
 }
 
