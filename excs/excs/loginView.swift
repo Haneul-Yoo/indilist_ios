@@ -53,12 +53,12 @@ class loginView: UIViewController {
                     print("로그인 성공")
                     UserDefaults.standard.set(true, forKey: "loginSuccess")
                     UserDefaults.standard.synchronize()
-                    self.dismiss(animated: true, completion: nil)
                     
                     let retStringArray = retString.components(separatedBy: "\"")
                     
                     self.loginUserInfo(userInfo: retStringArray)
                     
+                    self.performSegue(withIdentifier: "loginSuccess", sender: self)
                 }
             }
             else if(response.result.isFailure){

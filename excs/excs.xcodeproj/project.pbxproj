@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC55E163139F552DCDA548CD /* Pods_excs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D713A9556F5D9332211050 /* Pods_excs.framework */; };
+		CE35A7EF213289FD00452401 /* playingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A7EE213289FD00452401 /* playingView.swift */; };
 		CE39FE8D2127F1F600104FDF /* policyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39FE8C2127F1F600104FDF /* policyView.swift */; };
 		CE39FE8F21282B9100104FDF /* findView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39FE8E21282B9100104FDF /* findView.swift */; };
 		CE3C1D6B211EE8BE0050930B /* checkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1D6A211EE8BE0050930B /* checkView.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		616C713FB0622860253CDCC3 /* Pods-excs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-excs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-excs/Pods-excs.debug.xcconfig"; sourceTree = "<group>"; };
 		689DE0BD5B1205D3B57A6F19 /* Pods-excs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-excs.release.xcconfig"; path = "Pods/Target Support Files/Pods-excs/Pods-excs.release.xcconfig"; sourceTree = "<group>"; };
+		CE35A7EE213289FD00452401 /* playingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playingView.swift; sourceTree = "<group>"; };
 		CE39FE8C2127F1F600104FDF /* policyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policyView.swift; sourceTree = "<group>"; };
 		CE39FE8E21282B9100104FDF /* findView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findView.swift; sourceTree = "<group>"; };
 		CE3C1D6A211EE8BE0050930B /* checkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				CE3FD92D211F31A800A6C154 /* loginView.swift */,
 				CE39FE8C2127F1F600104FDF /* policyView.swift */,
 				CE39FE8E21282B9100104FDF /* findView.swift */,
+				CE35A7EE213289FD00452401 /* playingView.swift */,
 			);
 			path = excs;
 			sourceTree = "<group>";
@@ -195,10 +198,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-excs/Pods-excs-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -217,6 +222,7 @@
 				CE939E8E211ED9C1009A9543 /* AppDelegate.swift in Sources */,
 				CE3FD92E211F31A800A6C154 /* loginView.swift in Sources */,
 				CE3C1D6B211EE8BE0050930B /* checkView.swift in Sources */,
+				CE35A7EF213289FD00452401 /* playingView.swift in Sources */,
 				CE39FE8D2127F1F600104FDF /* policyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

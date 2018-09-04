@@ -6,11 +6,12 @@
 //  Copyright © 2018년 user. All rights reserved.
 //
 
+import SwiftyJSON
 import Alamofire
 import UIKit
 
 class checkView: UIViewController {
-
+    
     @IBOutlet weak var idText: UITextField!
     @IBOutlet weak var pwText: UITextField!
     @IBOutlet weak var pwChkText: UITextField!
@@ -27,6 +28,13 @@ class checkView: UIViewController {
     @IBOutlet weak var registerBtn: UIButton!
     
     @IBOutlet weak var userImage: UIImageView!
+    
+    @IBAction func userImageBtn(_ sender: Any) {
+        
+    }
+    
+    
+    
     
     var idChk = false
     var nameChk = false
@@ -45,11 +53,14 @@ class checkView: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
     @IBAction func changePwText(_ sender: Any) {
         let pwStr = pwText.text!
@@ -193,7 +204,7 @@ class checkView: UIViewController {
         
         let url = "https://www.indi-list.com/" + post
         let para : Parameters = [ paraIndex : str]
-        
+    
         Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
             //json return check in console && json to string
             print(response)
