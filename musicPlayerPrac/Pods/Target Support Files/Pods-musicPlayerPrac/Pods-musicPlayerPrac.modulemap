@@ -1,0 +1,6 @@
+framework module Pods_musicPlayerPrac {
+  umbrella header "Pods-musicPlayerPrac-umbrella.h"
+
+  export *
+  module * { export * }
+}
