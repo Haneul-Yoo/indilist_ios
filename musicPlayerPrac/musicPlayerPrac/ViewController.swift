@@ -9,6 +9,7 @@ import Alamofire
 import UIKit
 import AVFoundation
 import MediaPlayer
+import SwiftyJSON
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var nextBtn: UIButton!
     
     var audioPlayer = AVAudioPlayer()
+    var player : AVPlayer!
     
     let arr = ["1", "2", "3", "4"]
     
@@ -133,6 +135,42 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     // reaction by audioPlayer.delegate = self
     func audioPlayerDidFinishPlaying(_ _player: AVAudioPlayer, successfully flag: Bool){
         nextBtn.sendActions(for: .touchUpInside)
+    }
+    
+    
+    //not completed function
+    @IBAction func getMusicBtn(_ sender: Any) {
+        
+        let url = "https://indi-list.com/api/getmusic/"
+        let para : Parameters = [ "mid" : "57305"]
+        let headers = ["x-access-token" : "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6InF3ZXIxMjM0IiwiZXhwIjoxNTY3NjQyMzk1LCJleHBfcmVmcmVzaCI6MTUzNjEwOTk5NSwiaWF0IjoxNTM2MTA2Mzk0fQ.N6QcZplSLW2flSBwDV2EIzG2aSZteX7s_xFYYubc8_AP4Xq6VpTJtWw4wKMxrf6TrAtu2TKTwpl21o1Q3Fqb_FgbPVYrYPJwGDa3tUAbcxi_YUxEhSr1q9ltIwkeNbyDn0a0glf-hHeNe02RXl37HXEmo9K5_FTnPC7y_FpoRpE"]
+        
+        Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseJSON { response in
+            
+            print(response)
+            print("아아아")
+            
+            let swiftyJsonVar : JSON
+            
+            //to parse the JSON
+            if((response.result.value) != nil) {
+                swiftyJsonVar = JSON(response.result.value!)
+                print(swiftyJsonVar[0]["CloudFront-Policy"])
+                print(swiftyJsonVar[1]["CloudFront-Signature"])
+                print(swiftyJsonVar[2]["CloudFront-Key-Pair-Id"])
+                print(swiftyJsonVar[3]["music"])
+                print(swiftyJsonVar[4]["lyrics"])
+                
+                let musicUrl = URL(string: (swiftyJsonVar[3]["music"].string!))
+                let musicItem = AVPlayerItem(url: musicUrl!)
+                self.player = AVPlayer(playerItem: musicItem)
+                self.player.play()
+            }
+            
+        }
+        
+        
+        
     }
     
     
