@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "musicPlayerPrac/lyricsView.swift"
-            timestampString = "557800336.976504"
+            timestampString = "558194541.123814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "getLyricsBtn(_:)"
             landmarkType = "7">
          </BreakpointContent>

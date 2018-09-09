@@ -143,7 +143,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         let url = "https://indi-list.com/api/getmusic/"
         let para : Parameters = [ "mid" : "57305"]
-        let headers = ["x-access-token" : "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6InF3ZXIxMjM0IiwiZXhwIjoxNTY3NjQyMzk1LCJleHBfcmVmcmVzaCI6MTUzNjEwOTk5NSwiaWF0IjoxNTM2MTA2Mzk0fQ.N6QcZplSLW2flSBwDV2EIzG2aSZteX7s_xFYYubc8_AP4Xq6VpTJtWw4wKMxrf6TrAtu2TKTwpl21o1Q3Fqb_FgbPVYrYPJwGDa3tUAbcxi_YUxEhSr1q9ltIwkeNbyDn0a0glf-hHeNe02RXl37HXEmo9K5_FTnPC7y_FpoRpE"]
+        let headers = ["x-access-token" : "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6InF3ZXIxMjM0IiwiZXhwIjoxNTY3NzY2Mjg3LCJleHBfcmVmcmVzaCI6MTUzNjIzMzg4NywiaWF0IjoxNTM2MjMwMjg2fQ.EbI5FzDXNAFBWe4sSUm8v66BylcI2_mNphunLzM8DGxcj4ObhfptSgMSV-j-xZIK4g9U9gMawK8ZQxx-sF-nfddWrcXoUeHHzH1geHAVw5mkb9NoiGlIWdfkPFN28OHDMbxmov79UtmEbN-GVzV_ycz2aXfE-rVq8Emr9dV44IQ"]
         
         Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseJSON { response in
             
@@ -155,6 +155,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             //to parse the JSON
             if((response.result.value) != nil) {
                 swiftyJsonVar = JSON(response.result.value!)
+                let policy = swiftyJsonVar[0]["CloudFront-Policy"].string!
+                let signature = swiftyJsonVar[1]["CloudFront-Signature"].string!
+                let keyPair = swiftyJsonVar[2]["CloudFront-Key-Pair-Id"].string!
+                let domainString = swiftyJsonVar[3]["music"].string!
+                let domain = URL(string : domainString)
                 print(swiftyJsonVar[0]["CloudFront-Policy"])
                 print(swiftyJsonVar[1]["CloudFront-Signature"])
                 print(swiftyJsonVar[2]["CloudFront-Key-Pair-Id"])
@@ -164,9 +169,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 let musicUrl = URL(string: (swiftyJsonVar[3]["music"].string!))
                 let musicItem = AVPlayerItem(url: musicUrl!)
                 self.player = AVPlayer(playerItem: musicItem)
-                self.player.play()
+                
+                let policyS = "CloudFront-Policy=" + policy + ";"
+                let signatureS = " CloudFront-Signature=" + signature + ";"
+                let keyPairS = " CloudFront-Key-Pair-Id=" + keyPair + ";"
+                let domainS = " Domain=" + domainString + ";"
+                let headers = policyS + signatureS + keyPairS + domainS + " Path=/\r\n"
+                let jar = HTTPCookieStorage.shared
+                let cookie = ["Cookie": headers]
+                let cookie2 = HTTPCookie.cookies(withResponseHeaderFields: cookie, for: domain!)
+                jar.setCookies(cookie2, for: domain, mainDocumentURL: domain)
+                
+                let request = URLRequest(url: domain!)
+                print(request)
+                
+                
             }
-            
         }
         
         
