@@ -13,18 +13,11 @@
         <!--CHART-->
         <scene sceneID="RSJ-8P-7Vl">
             <objects>
-                <viewController id="0Cf-q0-u1f" sceneMemberID="viewController">
+                <viewController id="0Cf-q0-u1f" customClass="chartView" customModule="excs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EIt-bf-ioN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="차트장르" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-s3-Q7m">
-                                <rect key="frame" x="0.0" y="199" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6f-7x-r41">
                                 <rect key="frame" x="275" y="441" width="100" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,12 +27,26 @@
                                     <segue destination="Yb2-Pc-hip" kind="presentation" id="0Ui-92-eoO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="차트장르" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-s3-Q7m">
+                                <rect key="frame" x="0.0" y="108" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apV-F4-uWm">
+                                <rect key="frame" x="56" y="230" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8bI-jf-kng"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CHART" id="OUT-gr-eS8"/>
                     <navigationItem key="navigationItem" id="Vyz-cx-1HC"/>
+                    <connections>
+                        <outlet property="albumArtView" destination="apV-F4-uWm" id="Ej6-zx-O6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYH-c3-3Cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -562,6 +569,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Qm9-FE-5Aq"/>
-        <segue reference="A4x-HX-oIg"/>
+        <segue reference="4HY-y4-odK"/>
     </inferredMetricsTieBreakers>
 </document>

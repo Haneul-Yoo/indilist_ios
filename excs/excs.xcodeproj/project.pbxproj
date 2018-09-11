@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC55E163139F552DCDA548CD /* Pods_excs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D713A9556F5D9332211050 /* Pods_excs.framework */; };
+		CE0CB3E52147AD7B004800AD /* chartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0CB3E42147AD7B004800AD /* chartView.swift */; };
 		CE35A7EF213289FD00452401 /* playingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A7EE213289FD00452401 /* playingView.swift */; };
 		CE39FE8D2127F1F600104FDF /* policyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39FE8C2127F1F600104FDF /* policyView.swift */; };
 		CE39FE8F21282B9100104FDF /* findView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39FE8E21282B9100104FDF /* findView.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		616C713FB0622860253CDCC3 /* Pods-excs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-excs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-excs/Pods-excs.debug.xcconfig"; sourceTree = "<group>"; };
 		689DE0BD5B1205D3B57A6F19 /* Pods-excs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-excs.release.xcconfig"; path = "Pods/Target Support Files/Pods-excs/Pods-excs.release.xcconfig"; sourceTree = "<group>"; };
+		CE0CB3E42147AD7B004800AD /* chartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartView.swift; sourceTree = "<group>"; };
 		CE35A7EE213289FD00452401 /* playingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playingView.swift; sourceTree = "<group>"; };
 		CE39FE8C2127F1F600104FDF /* policyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policyView.swift; sourceTree = "<group>"; };
 		CE39FE8E21282B9100104FDF /* findView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				CE39FE8C2127F1F600104FDF /* policyView.swift */,
 				CE39FE8E21282B9100104FDF /* findView.swift */,
 				CE35A7EE213289FD00452401 /* playingView.swift */,
+				CE0CB3E42147AD7B004800AD /* chartView.swift */,
 			);
 			path = excs;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				CE3C1D6B211EE8BE0050930B /* checkView.swift in Sources */,
 				CE35A7EF213289FD00452401 /* playingView.swift in Sources */,
 				CE39FE8D2127F1F600104FDF /* policyView.swift in Sources */,
+				CE0CB3E52147AD7B004800AD /* chartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
