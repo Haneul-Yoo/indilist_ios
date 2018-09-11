@@ -20,7 +20,7 @@ class lyricsView: UIViewController {
             if(firstLoadString == ""){
                 let url = "https://indi-list.com/api/GetLyrics/"
                 let para : Parameters = [ "mid" : "41768"]
-                let headers = ["x-access-token" : "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6InF3ZXIxMjM0IiwiZXhwIjoxNTY4MDg2OTM0LCJleHBfcmVmcmVzaCI6MTUzNjU1NDUzNCwiaWF0IjoxNTM2NTUwOTM0fQ.IavV9USJb3W_ymlD73TDViNfqn2R5uN0IAaPHQslDMZ8NjS4ZPnbbIWzdsLNjePwk3HFiOuPlofb9tF0KF6tAd8u2bBZqKho-9DLMo782XbrZltWEQ2p7smpZZaK0hWbv7y8lJGrMu47WHup1sVII3jN8TyoEIq93adicL-adzg"]
+                let headers = ["x-access-token" : "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6InF3ZXIxMjM0IiwiZXhwIjoxNTY4MTk3NTE4LCJleHBfcmVmcmVzaCI6MTUzNjY2NTExOCwiaWF0IjoxNTM2NjYxNTE3fQ.DM7qDud47ZzpmlHlrkmwba0f4OjNgUIvI2WX3TpmCZ2QssRNBVItZ9GO0gEkUSbNDBmaIft-xnE0un4VuxV_cmp0dFlebr7E7MJfn2KxnyXJMh6f5mE0a3f7Osp0qo8g0_4po2wI8YbQY3JpHEEoM6lH5WYPSDk4rPlag7ewBP0"]
                 
                 Alamofire.request(url, method: .post, parameters: para, encoding: JSONEncoding.default, headers : headers).responseString { response in
                     //json return check in console && json to string
