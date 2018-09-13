@@ -35,7 +35,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apV-F4-uWm">
-                                <rect key="frame" x="56" y="230" width="240" height="128"/>
+                                <rect key="frame" x="56" y="230" width="93" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5R-4a-EBI">
+                                <rect key="frame" x="56" y="330" width="93" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -46,6 +50,7 @@
                     <navigationItem key="navigationItem" id="Vyz-cx-1HC"/>
                     <connections>
                         <outlet property="albumArtView" destination="apV-F4-uWm" id="Ej6-zx-O6Q"/>
+                        <outlet property="artistImgView" destination="i5R-4a-EBI" id="l1E-Iu-33h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYH-c3-3Cr" userLabel="First Responder" sceneMemberID="firstResponder"/>

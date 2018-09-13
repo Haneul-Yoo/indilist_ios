@@ -11,6 +11,7 @@ import Alamofire
 
 class chartView: UIViewController {
     @IBOutlet weak var albumArtView: UIImageView!
+    @IBOutlet weak var artistImgView: UIImageView!
     
     var data = Data()
     override func viewDidLoad() {
@@ -19,10 +20,34 @@ class chartView: UIViewController {
             print("fin")
         })
         
-        let imageUrl = URL(string: "http://d1e9zqysfkgjz.cloudfront.net/AlbumArt/pc0211/62451")
-        let imageData:NSData = NSData(contentsOf: imageUrl!)!
-        albumArtView.image = UIImage(data: imageData as Data)
-        // Do any additional setup after loading the view.
+        if let url = URL(string: "https://d1e9zqysfkgjz.cloudfront.net/AlbumArt/ajoumidi/57305") {
+            albumArtView.contentMode = .scaleAspectFit
+            downloadImage(imgView: albumArtView, from: url)
+        }
+        if let url = URL(string: "https://d1e9zqysfkgjz.cloudfront.net/profile/ajoumidi/ajoumidi_profile_1528543868648") {
+            artistImgView.contentMode = .scaleAspectFit
+            downloadImage(imgView: artistImgView, from: url)
+        }
+        
+    }
+    
+    func downloadImage(imgView: UIImageView, from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("error")
+                return
+            }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                imgView.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
         
 
