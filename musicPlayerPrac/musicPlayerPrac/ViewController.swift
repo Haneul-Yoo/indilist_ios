@@ -6,7 +6,6 @@
 //  Copyright © 2018년 user. All rights reserved.
 //
 import Alamofire
-import UIKit
 import AVFoundation
 import MediaPlayer
 import SwiftyJSON
