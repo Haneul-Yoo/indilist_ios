@@ -11,16 +11,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    // login
     override func viewDidAppear(_ animated: Bool) {
         let loginChecker = UserDefaults.standard.bool(forKey: "loginSuccess")
         if(!loginChecker){
@@ -48,5 +45,32 @@ class ViewController: UIViewController {
         UserDefaults.standard.synchronize()
     }
     
+    // side menu
+    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+    var sideMenuOpen = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
+        
+        sideMenuOpen = false
+        sideMenuConstraint.constant = -272
+    }
+    
+    @objc func toggleSideMenu() {
+        if sideMenuOpen {
+            sideMenuOpen = false
+            sideMenuConstraint.constant = -272
+        } else {
+            sideMenuOpen = true
+            sideMenuConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
 }
 

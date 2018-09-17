@@ -10,21 +10,44 @@ import UIKit
 import Alamofire
 
 class chartView: UIViewController {
-    @IBOutlet weak var albumArtView: UIImageView!
+    // side menu
+    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+    var sideMenuOpen = false
     
-    var data = Data()
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        sideMenuOpen = false
+        sideMenuConstraint.constant = -272
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
+        
+
+        // chart
         chartLoad(completion: {
             print("fin")
         })
-        
-        let imageUrl = URL(string: "http://d1e9zqysfkgjz.cloudfront.net/AlbumArt/pc0211/62451")
-        let imageData:NSData = NSData(contentsOf: imageUrl!)!
-        albumArtView.image = UIImage(data: imageData as Data)
-        // Do any additional setup after loading the view.
     }
-        
+    
+    @objc func toggleSideMenu() {
+        if sideMenuOpen {
+            sideMenuOpen = false
+            sideMenuConstraint.constant = -272
+        } else {
+            sideMenuOpen = true
+            sideMenuConstraint.constant = 0
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    
+    // chart
+    @IBOutlet weak var albumArtView: UIImageView!
+    
+    var data = Data()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
