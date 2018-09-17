@@ -9,27 +9,38 @@
 /* Begin PBXBuildFile section */
 		AC55E163139F552DCDA548CD /* Pods_excs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D713A9556F5D9332211050 /* Pods_excs.framework */; };
 		CE0CB3E52147AD7B004800AD /* chartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0CB3E42147AD7B004800AD /* chartView.swift */; };
-		CE35A7EF213289FD00452401 /* playingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A7EE213289FD00452401 /* playingView.swift */; };
 		CE39FE8D2127F1F600104FDF /* policyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39FE8C2127F1F600104FDF /* policyView.swift */; };
 		CE39FE8F21282B9100104FDF /* findView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39FE8E21282B9100104FDF /* findView.swift */; };
 		CE3C1D6B211EE8BE0050930B /* checkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C1D6A211EE8BE0050930B /* checkView.swift */; };
 		CE3FD92E211F31A800A6C154 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FD92D211F31A800A6C154 /* loginView.swift */; };
+		CE42C514214E0A4000E01698 /* sideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C513214E0A4000E01698 /* sideMenu.swift */; };
+		CE42C516214E122100E01698 /* sideMenuMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C515214E122100E01698 /* sideMenuMain.swift */; };
+		CE42C51A214FB98C00E01698 /* artistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42C519214FB98C00E01698 /* artistView.swift */; };
 		CE939E8E211ED9C1009A9543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE939E8D211ED9C1009A9543 /* AppDelegate.swift */; };
 		CE939E90211ED9C1009A9543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE939E8F211ED9C1009A9543 /* ViewController.swift */; };
 		CE939E93211ED9C1009A9543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE939E91211ED9C1009A9543 /* Main.storyboard */; };
 		CE939E95211ED9C3009A9543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE939E94211ED9C3009A9543 /* Assets.xcassets */; };
 		CE939E98211ED9C3009A9543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE939E96211ED9C3009A9543 /* LaunchScreen.storyboard */; };
+		CE9F90A4214A5F8E005A3604 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90A3214A5F8E005A3604 /* PageViewController.swift */; };
+		CE9F90A6214A60EA005A3604 /* pageView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90A5214A60EA005A3604 /* pageView1.swift */; };
+		CE9F90A8214A60F9005A3604 /* pageView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90A7214A60F9005A3604 /* pageView2.swift */; };
+		CE9F90AA214A6106005A3604 /* pageView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90A9214A6106005A3604 /* pageView3.swift */; };
+		CE9F90AC214A6112005A3604 /* pageView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90AB214A6112005A3604 /* pageView4.swift */; };
+		CE9F90AE214A6122005A3604 /* pageView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90AD214A6122005A3604 /* pageView5.swift */; };
+		CE9F90B0214A6133005A3604 /* pageView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F90AF214A6133005A3604 /* pageView6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		616C713FB0622860253CDCC3 /* Pods-excs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-excs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-excs/Pods-excs.debug.xcconfig"; sourceTree = "<group>"; };
 		689DE0BD5B1205D3B57A6F19 /* Pods-excs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-excs.release.xcconfig"; path = "Pods/Target Support Files/Pods-excs/Pods-excs.release.xcconfig"; sourceTree = "<group>"; };
 		CE0CB3E42147AD7B004800AD /* chartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartView.swift; sourceTree = "<group>"; };
-		CE35A7EE213289FD00452401 /* playingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playingView.swift; sourceTree = "<group>"; };
 		CE39FE8C2127F1F600104FDF /* policyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policyView.swift; sourceTree = "<group>"; };
 		CE39FE8E21282B9100104FDF /* findView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findView.swift; sourceTree = "<group>"; };
 		CE3C1D6A211EE8BE0050930B /* checkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkView.swift; sourceTree = "<group>"; };
 		CE3FD92D211F31A800A6C154 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
+		CE42C513214E0A4000E01698 /* sideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenu.swift; sourceTree = "<group>"; };
+		CE42C515214E122100E01698 /* sideMenuMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuMain.swift; sourceTree = "<group>"; };
+		CE42C519214FB98C00E01698 /* artistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artistView.swift; sourceTree = "<group>"; };
 		CE939E8A211ED9C1009A9543 /* excs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = excs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE939E8D211ED9C1009A9543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE939E8F211ED9C1009A9543 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +48,13 @@
 		CE939E94211ED9C3009A9543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE939E97211ED9C3009A9543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE939E99211ED9C3009A9543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9F90A3214A5F8E005A3604 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		CE9F90A5214A60EA005A3604 /* pageView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageView1.swift; sourceTree = "<group>"; };
+		CE9F90A7214A60F9005A3604 /* pageView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageView2.swift; sourceTree = "<group>"; };
+		CE9F90A9214A6106005A3604 /* pageView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageView3.swift; sourceTree = "<group>"; };
+		CE9F90AB214A6112005A3604 /* pageView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageView4.swift; sourceTree = "<group>"; };
+		CE9F90AD214A6122005A3604 /* pageView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageView5.swift; sourceTree = "<group>"; };
+		CE9F90AF214A6133005A3604 /* pageView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pageView6.swift; sourceTree = "<group>"; };
 		E7D713A9556F5D9332211050 /* Pods_excs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_excs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,14 +102,23 @@
 				CE939E8D211ED9C1009A9543 /* AppDelegate.swift */,
 				CE939E8F211ED9C1009A9543 /* ViewController.swift */,
 				CE939E91211ED9C1009A9543 /* Main.storyboard */,
+				CE9F90AD214A6122005A3604 /* pageView5.swift */,
+				CE9F90A3214A5F8E005A3604 /* PageViewController.swift */,
+				CE42C513214E0A4000E01698 /* sideMenu.swift */,
+				CE42C515214E122100E01698 /* sideMenuMain.swift */,
+				CE9F90A7214A60F9005A3604 /* pageView2.swift */,
+				CE9F90A5214A60EA005A3604 /* pageView1.swift */,
+				CE9F90AB214A6112005A3604 /* pageView4.swift */,
+				CE9F90A9214A6106005A3604 /* pageView3.swift */,
+				CE9F90AF214A6133005A3604 /* pageView6.swift */,
 				CE939E94211ED9C3009A9543 /* Assets.xcassets */,
 				CE939E96211ED9C3009A9543 /* LaunchScreen.storyboard */,
 				CE939E99211ED9C3009A9543 /* Info.plist */,
 				CE3C1D6A211EE8BE0050930B /* checkView.swift */,
+				CE42C519214FB98C00E01698 /* artistView.swift */,
 				CE3FD92D211F31A800A6C154 /* loginView.swift */,
 				CE39FE8C2127F1F600104FDF /* policyView.swift */,
 				CE39FE8E21282B9100104FDF /* findView.swift */,
-				CE35A7EE213289FD00452401 /* playingView.swift */,
 				CE0CB3E42147AD7B004800AD /* chartView.swift */,
 			);
 			path = excs;
@@ -221,12 +248,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE939E90211ED9C1009A9543 /* ViewController.swift in Sources */,
+				CE9F90AA214A6106005A3604 /* pageView3.swift in Sources */,
+				CE9F90B0214A6133005A3604 /* pageView6.swift in Sources */,
+				CE42C514214E0A4000E01698 /* sideMenu.swift in Sources */,
 				CE39FE8F21282B9100104FDF /* findView.swift in Sources */,
 				CE939E8E211ED9C1009A9543 /* AppDelegate.swift in Sources */,
+				CE42C51A214FB98C00E01698 /* artistView.swift in Sources */,
 				CE3FD92E211F31A800A6C154 /* loginView.swift in Sources */,
 				CE3C1D6B211EE8BE0050930B /* checkView.swift in Sources */,
-				CE35A7EF213289FD00452401 /* playingView.swift in Sources */,
+				CE9F90A6214A60EA005A3604 /* pageView1.swift in Sources */,
+				CE42C516214E122100E01698 /* sideMenuMain.swift in Sources */,
+				CE9F90AE214A6122005A3604 /* pageView5.swift in Sources */,
+				CE9F90A8214A60F9005A3604 /* pageView2.swift in Sources */,
+				CE9F90A4214A5F8E005A3604 /* PageViewController.swift in Sources */,
 				CE39FE8D2127F1F600104FDF /* policyView.swift in Sources */,
+				CE9F90AC214A6112005A3604 /* pageView4.swift in Sources */,
 				CE0CB3E52147AD7B004800AD /* chartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
