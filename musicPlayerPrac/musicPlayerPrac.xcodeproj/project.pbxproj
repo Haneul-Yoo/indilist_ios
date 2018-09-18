@@ -16,6 +16,8 @@
 		CE607F38213D1590004D7651 /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE607F34213D158F004D7651 /* 4.mp3 */; };
 		CE607F39213D1590004D7651 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE607F35213D1590004D7651 /* 2.mp3 */; };
 		CE607F3A213D1590004D7651 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE607F36213D1590004D7651 /* 1.mp3 */; };
+		CE95684F214D4AFD00F7E427 /* noticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95684E214D4AFD00F7E427 /* noticeView.swift */; };
+		CE956851214E0E5E00F7E427 /* personalCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE956850214E0E5E00F7E427 /* personalCheckView.swift */; };
 		CEAA0634213E8AC000BB0DB3 /* lyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA0633213E8AC000BB0DB3 /* lyricsView.swift */; };
 		DDF3A10E39758E5C0192FD7D /* Pods_musicPlayerPrac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60507E3950AAEC724CA327D6 /* Pods_musicPlayerPrac.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +37,8 @@
 		CE607F34213D158F004D7651 /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
 		CE607F35213D1590004D7651 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 		CE607F36213D1590004D7651 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		CE95684E214D4AFD00F7E427 /* noticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noticeView.swift; sourceTree = "<group>"; };
+		CE956850214E0E5E00F7E427 /* personalCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalCheckView.swift; sourceTree = "<group>"; };
 		CEAA0633213E8AC000BB0DB3 /* lyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lyricsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,8 @@
 				CE607F2C213CDE55004D7651 /* Info.plist */,
 				CE607F32213D152D004D7651 /* music */,
 				CEAA0633213E8AC000BB0DB3 /* lyricsView.swift */,
+				CE95684E214D4AFD00F7E427 /* noticeView.swift */,
+				CE956850214E0E5E00F7E427 /* personalCheckView.swift */,
 			);
 			path = musicPlayerPrac;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE95684F214D4AFD00F7E427 /* noticeView.swift in Sources */,
 				CE607F23213CDE55004D7651 /* ViewController.swift in Sources */,
+				CE956851214E0E5E00F7E427 /* personalCheckView.swift in Sources */,
 				CE607F21213CDE55004D7651 /* AppDelegate.swift in Sources */,
 				CEAA0634213E8AC000BB0DB3 /* lyricsView.swift in Sources */,
 			);

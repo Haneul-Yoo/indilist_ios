@@ -10,9 +10,14 @@ import UIKit
 import Alamofire
 
 class chartView: UIViewController {
-    // side menu
-    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
-    var sideMenuOpen = false
+// <<<<<<< Haneul-Yoo-patch-1
+//     // side menu
+//     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+//     var sideMenuOpen = false
+// =======
+//     @IBOutlet weak var albumArtView: UIImageView!
+//     @IBOutlet weak var artistImgView: UIImageView!
+// >>>>>>> master
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +33,39 @@ class chartView: UIViewController {
         chartLoad(completion: {
             print("fin")
         })
-    }
+// <<<<<<< Haneul-Yoo-patch-1
+// =======
+        
+//         if let url = URL(string: "https://d1e9zqysfkgjz.cloudfront.net/AlbumArt/ajoumidi/57305") {
+//             albumArtView.contentMode = .scaleAspectFit
+//             downloadImage(imgView: albumArtView, from: url)
+//         }
+//         if let url = URL(string: "https://d1e9zqysfkgjz.cloudfront.net/profile/ajoumidi/ajoumidi_profile_1528543868648") {
+//             artistImgView.contentMode = .scaleAspectFit
+//             downloadImage(imgView: artistImgView, from: url)
+//         }
+        
+//     }
+    
+//     func downloadImage(imgView: UIImageView, from url: URL) {
+//         print("Download Started")
+//         getData(from: url) { data, response, error in
+//             guard let data = data, error == nil else {
+//                 print("error")
+//                 return
+//             }
+//             print(response?.suggestedFilename ?? url.lastPathComponent)
+//             print("Download Finished")
+//             DispatchQueue.main.async() {
+//                 imgView.image = UIImage(data: data)
+//             }
+//         }
+//     }
+    
+//     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+//         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+// >>>>>>> master
+//     }
     
     @objc func toggleSideMenu() {
         if sideMenuOpen {
